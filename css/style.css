@@ -35,3 +35,8 @@
 #pomo-error{
     display: none;
 }
+
+#user-promo{
+    background-color: yellow;
+    color: black;
+}

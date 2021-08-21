@@ -1,12 +1,12 @@
 
-// update memoray section 
+// update memoray total function 
 function memoryUpdate(item1, item2, price) {
     document.getElementById("memory-" + item1).classList.add("btn-select");
     document.getElementById("memory-" + item2).classList.remove("btn-select");
     document.getElementById("memory-charge").innerText = price;
     updateTotal();
 }
-// update strage section 
+// update storage total function 
 function storageUpdate(item1, item2, item3, price) {
     document.getElementById("storage-" + item1).classList.add("btn-select");
     document.getElementById("storage-"+item2).classList.remove('btn-select');
@@ -14,14 +14,14 @@ function storageUpdate(item1, item2, item3, price) {
     document.getElementById("storage-charge").innerText = price;
     updateTotal();
 }
-// update delivery option section 
+// update delivery charge total function 
 function deliveryUpdate(option1, option2, charge) {
     document.getElementById("delivery-" + option1).classList.add("btn-select");
     document.getElementById("delivery-" + option2).classList.remove("btn-select");
     document.getElementById("delivery-charge").innerText = charge;
     updateTotal();
 }
-// update Total 
+// update Total function
 function updateTotal() {
     const memory = document.getElementById("memory-charge").innerText;
     const stroge = document.getElementById("storage-charge").innerText;
@@ -62,6 +62,7 @@ document.getElementById('delivery-option-2').addEventListener('click', function 
 const pomoInput = document.getElementById("pomo-input");
 const pomoBtn = document.getElementById("pomo-btn");
 const pomoErr = document.getElementById("pomo-error");
+
 pomoBtn.addEventListener("click", function () {
     const pomoInputValue = pomoInput.value;
     if (pomoInputValue.toLowerCase() == "stevekaku") {
@@ -69,7 +70,7 @@ pomoBtn.addEventListener("click", function () {
         document.getElementById("final-total").innerText = updateTotal() - discount;
         pomoErr.style.display = "none";
     } else {
-        
+        document.getElementById('user-promo').innerText = pomoInputValue
         pomoErr.style.display = "block";
     }
     pomoInput.value = '';
