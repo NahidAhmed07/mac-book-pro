@@ -1,0 +1,37 @@
+
+/* total section style  */
+.total-section p{
+    margin: 0px;
+}
+
+.total-section .money{
+    width: 70px;
+}
+
+.total-hr{
+    border-bottom: 1px solid #525252;
+    display: block;
+    margin: 10px 0;
+}
+
+/* all configaration button  */
+.mac-btn{
+    border: 1px solid #343a40;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: #2f2f2f;
+    transition: 0.1s ;
+}
+.mac-btn:hover{
+    background: #343a40;
+    color: white;
+}
+
+.btn-select{
+    background: #343a40;
+    color: white;
+}
+
+#pomo-error{
+    display: none;
+}
